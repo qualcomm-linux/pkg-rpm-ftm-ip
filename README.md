@@ -4,7 +4,7 @@ SPDX-License-Identifier: BSD-3-Clause
 -->
 # ftm-ip RPM - CentOS Stream 10
 
-This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a prebuilt payload tarball.
+This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a Qualcomm Linux release tarball.
 
 ## Package
 
@@ -12,7 +12,7 @@ This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a prebui
 |---|---|
 | Package | ftm-ip |
 | Version | 1.0.2 |
-| Source | ftm-ip-prebuilt-1.0.2.tar.gz |
+| Source | ftmdaemon-ip_1.0.2_arm64.tar.gz |
 | Source checksum | See sources |
 
 The prebuilt payload installs:
@@ -27,14 +27,14 @@ The prebuilt payload installs:
 - .github/workflows/build-on-pr.yml
 - .github/workflows/pkg-release.yml
 
-Do not commit source tarballs or built RPMs. This package uses a prebuilt payload tarball, so the tarball must be available in the lookaside cache before CI can build it.
+Do not commit source tarballs or built RPMs. The source tarball is resolved from the dist-git `sources` file and the spec `Source0` URL.
 
 ## Build
 
 Local validation can be run with qcom-rpm-utils:
 
     /path/to/qcom-rpm-utils/scripts/build-rpm.sh \
-      --tarball /path/to/ftm-ip-prebuilt-1.0.2.tar.gz \
+      --tarball /path/to/ftmdaemon-ip_1.0.2_arm64.tar.gz \
       --spec ftm-ip.spec \
       --output /path/to/output
 
