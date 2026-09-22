@@ -4,6 +4,10 @@ SPDX-License-Identifier: BSD-3-Clause
 -->
 # ftm-ip RPM - CentOS Stream 10
 
+ftm-ip provides network access to Qualcomm WLAN Factory Test Mode (FTM).
+The ftmdaemon-ip daemon lets test clients communicate with a device over
+IP to perform WLAN factory testing.
+
 This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a Qualcomm Linux release tarball.
 
 ## Package
@@ -11,6 +15,7 @@ This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a Qualco
 | Field | Value |
 |---|---|
 | Package | ftm-ip |
+| Summary | WLAN Factory Test Mode daemon with an IP interface |
 | Version | 1.0.2 |
 | Source | ftmdaemon-ip_1.0.2_arm64.tar.gz |
 | Source checksum | See sources |
