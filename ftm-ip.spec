@@ -2,10 +2,10 @@
 
 Name:           ftm-ip
 Version:        1.0.2
-Release:        2%{?dist}
+Release:        1%{?dist}
 Summary:        WLAN Factory Test Mode daemon over IP
 
-License:        Qualcomm-Technologies-Inc.-Proprietary
+License:        Qualcomm.nologin.binaries.license
 Source0:        https://qartifactory-edge.qualcomm.com/artifactory/qsc_releases/software/chip/component/wlan-service.qclinux.0.0/260630.1/prebuilt_noble/ftmdaemon-ip_%{version}_arm64.tar.gz
 
 ExclusiveArch:  aarch64
