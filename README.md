@@ -25,6 +25,14 @@ The prebuilt payload installs:
 - /usr/bin/ftmdaemon-ip
 - /usr/bin/ftm_ip
 
+License documents from the prebuilt archive are installed under
+`/usr/share/licenses/ftm-ip/` and marked as license files in the RPM:
+
+- `copyright`
+- `NOTICE`
+
+The original copies are retained under `/usr/share/doc/ftmdaemon-ip/`.
+
 ## Files
 
 - ftm-ip.spec

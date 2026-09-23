@@ -28,6 +28,8 @@ ln -s ftmdaemon-ip %{buildroot}%{_bindir}/ftm_ip
 find %{buildroot} \( -type f -o -type l \) -printf '/%%P\n' | sort > %{name}.files
 
 %files -f %{name}.files
+%license data/ftmdaemon-ip/arm64/usr/share/doc/ftmdaemon-ip/copyright
+%license data/ftmdaemon-ip/arm64/usr/share/doc/ftmdaemon-ip/NOTICE
 
 %changelog
 * Fri Aug 21 2026 Yu Zhang <yu.zhang@oss.qualcomm.com> - 1.0.2-1
