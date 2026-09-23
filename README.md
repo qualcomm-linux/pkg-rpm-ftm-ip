@@ -8,7 +8,7 @@ ftm-ip provides network access to Qualcomm WLAN Factory Test Mode (FTM).
 The ftmdaemon-ip daemon lets test clients communicate with a device over
 IP to perform WLAN factory testing.
 
-This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a Qualcomm Linux release tarball.
+This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from the Qualcomm Linux `260825/prebuilt_yocto` release tarball.
 
 ## Package
 
@@ -17,8 +17,10 @@ This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a Qualco
 | Package | ftm-ip |
 | Summary | WLAN Factory Test Mode daemon with an IP interface |
 | Version | 1.0.2 |
-| Source | ftmdaemon-ip_1.0.2_arm64.tar.gz |
+| Source | qcom-ftm-ip_1.0_armv8-2a.tar.gz |
 | Source checksum | See sources |
+
+The Yocto source archive version (`1.0`) is tracked separately from the RPM version.
 
 The prebuilt payload installs:
 
@@ -28,10 +30,12 @@ The prebuilt payload installs:
 License documents from the prebuilt archive are installed under
 `/usr/share/licenses/ftm-ip/` and marked as license files in the RPM:
 
-- `copyright`
-- `NOTICE`
+- `NO.LOGIN.BINARY.LICENSE.QTI`
 
-The original copies are retained under `/usr/share/doc/ftmdaemon-ip/`.
+The original copy is retained under `/usr/share/doc/qcom-ftm-ip/`.
+
+The Yocto executable links to libbsd and GLib in addition to libnl and glibc.
+RPM records these shared-library dependencies automatically.
 
 ## Files
 
@@ -47,7 +51,7 @@ Do not commit source tarballs or built RPMs. The source tarball is resolved from
 Local validation can be run with qcom-rpm-utils:
 
     /path/to/qcom-rpm-utils/scripts/build-rpm.sh \
-      --tarball /path/to/ftmdaemon-ip_1.0.2_arm64.tar.gz \
+      --tarball /path/to/qcom-ftm-ip_1.0_armv8-2a.tar.gz \
       --spec ftm-ip.spec \
       --output /path/to/output
 
