@@ -8,7 +8,9 @@ ftm-ip provides network access to Qualcomm WLAN Factory Test Mode (FTM).
 The ftmdaemon-ip daemon lets test clients communicate with a device over
 IP to perform WLAN factory testing.
 
-This branch contains the CentOS Stream 10 RPM packaging for ftm-ip from a Qualcomm Linux release tarball.
+The [`c10s`](https://github.com/qualcomm-linux/pkg-rpm-ftm-ip/tree/c10s) branch contains the
+CentOS Stream 10 RPM packaging for ftm-ip from a Qualcomm Linux release tarball.
+Check out that branch to access the spec file and `sources`.
 
 ## Package
 
@@ -51,8 +53,12 @@ Local validation can be run with qcom-rpm-utils:
       --spec ftm-ip.spec \
       --output /path/to/output
 
-For CI, open a PR against this c10s branch. The build-on-pr workflow builds RPM artifacts but does not publish them.
+For CI, open a PR against the `c10s` branch. The build-on-pr workflow builds RPM artifacts but does not publish them.
 
 ## Release
 
 After the PR is merged, run Actions -> Release on the c10s branch. The release workflow publishes the generated RPMs to Artifactory after approval.
+
+## License
+
+pkg-rpm-ftm-ip is licensed under the [BSD-3-Clause License](https://spdx.org/licenses/BSD-3-Clause.html). See [LICENSE.txt](LICENSE.txt) for the full license text.
